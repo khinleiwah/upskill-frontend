@@ -6,7 +6,7 @@ export const get_category = createAsyncThunk(
     'product/get_category',
     async (_, { fulfillWithValue }) => {
         try {
-            const { data } = await axios.get('https://cors-everywhere.herokuapp.com/http://34.231.21.116:8100/categories')
+            const { data } = await axios.get('http://34.231.21.116:8100/categories')
             // const { data } = await api.get('category/categories')
             console.log(data)
             return fulfillWithValue(data)
@@ -21,7 +21,7 @@ export const get_products = createAsyncThunk(
     'product/get_products',
     async (_, { fulfillWithValue }) => {
         try {
-            const { data } = await axios.get('https://cors-everywhere.herokuapp.com/http://34.201.112.72:8200/products')
+            const { data } = await axios.get('http://54.146.19.65:8200/products')
             // const { data } = await api.get('product/products')
             console.log(data)
             return fulfillWithValue(data)
@@ -36,7 +36,7 @@ export const product_details = createAsyncThunk(
     'product/product_details',
     async (slug, { fulfillWithValue }) => {
         try {
-            const { data } = await axios.get(`http://localhost:8200/product/details/${slug}`)
+            const { data } = await axios.get(`http://54.146.19.65:8200/product/details/${slug}`)
             // const { data } = await api.get(`product/product/details/${slug}`)
             console.log("product details" + data)
             return fulfillWithValue(data)
@@ -51,7 +51,7 @@ export const query_products = createAsyncThunk(
     'product/query_products',
     async (query, { fulfillWithValue }) => {
         try {
-            const { data } = await axios.get(`http://localhost:8200/product?category=${query.category}&&searchValue=${query.searchValue ? query.searchValue : ''}`)
+            const { data } = await axios.get(`http://54.146.19.65:8200/product?category=${query.category}&&searchValue=${query.searchValue ? query.searchValue : ''}`)
             // const { data } = await axios.get(`product/product?category=${query.category}&&searchValue=${query.searchValue ? query.searchValue : ''}`)
             console.log(data)
             return fulfillWithValue(data)
@@ -69,7 +69,7 @@ export const add_product = createAsyncThunk(
             // const { data } = await api.post(`/product/add`, info)
             console.log("axios "+info)
             const response = await axios.post(
-                'http://localhost:8200/product/add',
+                'http://54.146.19.65:8200/product/add',
                 info
               );
             // const response = await api.post(
