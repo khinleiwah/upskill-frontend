@@ -47,7 +47,7 @@ const Login = () => {
                                         <input onChange={inputHandle} value={state.password} className='w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md' type="password" name="password" id="password" placeholder='Password' required />
                                     </div>
 
-                                    <button className='px-8 w-full py-2 bg-[#059473] shadow-lg hover:shadow-green-500/40 text-white rounded-md'>Login</button>
+                                    <button className='px-8 w-full py-2 bg-[#051894] shadow-lg hover:shadow-green-500/40 text-white rounded-md'>Login</button>
 
                                 </form>
                                 <div className='flex justify-center items-center py-2'>

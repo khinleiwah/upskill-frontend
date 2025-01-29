@@ -38,7 +38,7 @@ const Header = () => {
                         <ul className='flex justify-start items-center gap-8 font-semibold text-black'>
                             <li className='flex relative justify-center items-center gap-2 text-sm after:absolute after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px]'>
                                 <span><MdEmail /></span>
-                                <span>support@gmail.com</span>
+                                <span>khinleiwahwin84@gmail.com</span>
                             </li>
 
                             <li className='flex relative justify-center items-center gap-2 text-sm '>
@@ -101,20 +101,20 @@ const Header = () => {
                             <div className='flex justify-between md-lg:justify-center items-center flex-wrap pl-8'>
                                 <ul className='flex justify-start items-start gap-8 text-sm font-bold uppercase md-lg:hidden'>
                                     <li>
-                                        <Link to= '/home' className={`p-2 block ${pathname === '/home' ? 'text-[#059473]' : 'text-slate-600'} `} >Home</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link className={`p-2 block ${pathname === '/shops' ? 'text-[#059473]' : 'text-slate-600'} `} >Shop</Link>
+                                        <Link to= '/home' className={`p-2 block ${pathname === '/home' ? 'text-[#051894]' : 'text-slate-600'} `} >Home</Link>
                                     </li>
                                     <li>
-                                        <Link to='/startSelling' className={`p-2 block ${pathname === '/startSelling' ? 'text-[#059473]' : 'text-slate-600'} `} >Start Selling</Link>
+                                        <Link to='/startSelling' className={`p-2 block ${pathname === '/startSelling' ? 'text-[#051894]' : 'text-slate-600'} `} >Add Product</Link>
                                     </li>
                                     <li>
-                                        <Link className={`p-2 block ${pathname === '/about' ? 'text-[#059473]' : 'text-slate-600'} `} >About Us</Link>
+                                        <Link className={`p-2 block ${pathname === '/shops' ? 'text-[#051894]' : 'text-slate-600'} `} >Shop</Link>
+                                    </li>
+                                    
+                                    <li>
+                                        <Link className={`p-2 block ${pathname === '/about' ? 'text-[#051894]' : 'text-slate-600'} `} >About Us</Link>
                                     </li>
                                     <li>
-                                        <Link className={`p-2 block ${pathname === '/contact' ? 'text-[#059473]' : 'text-slate-600'} `} >Contact Us</Link>
+                                        <Link className={`p-2 block ${pathname === '/contact' ? 'text-[#051894]' : 'text-slate-600'} `} >Contact Us</Link>
                                     </li>
 
                                 </ul>
@@ -155,7 +155,7 @@ const Header = () => {
                 <div className='flex w-full flex-wrap md-lg:gap-8'>
                     <div className='w-3/12 md-lg:w-full'>
                         <div className='bg-white relative'>
-                            <div onClick={() => setCategoryShow(!categoryShow)} className='h-[50px] bg-[#059473] text-white flex justify-center md-lg:justify-between md-lg:px-6 items-center gap-3 font-bold text-md cursor-pointer'>
+                            <div onClick={() => setCategoryShow(!categoryShow)} className='h-[50px] bg-[#051894] text-white flex justify-center md-lg:justify-between md-lg:px-6 items-center gap-3 font-bold text-md cursor-pointer'>
                                 <div className='flex justify-center items-center gap-3'>
                                     <span><FaList /></span>
                                     <span>All Category </span>
@@ -200,7 +200,7 @@ const Header = () => {
                                         </select>
                                     </div>
                                     <input className='w-full relative bg-transparent text-slate-500 outline-0 px-3 h-full' onChange={(e)=> setSearchValue(e.target.value)} type="text" name='' id='' placeholder='What do you need' />
-                                    <button onClick={search} className='bg-[#059473] right-0 absolute px-8 h-full font-semibold uppercase text-white'>Search</button>
+                                    <button onClick={search} className='bg-[#051894] right-0 absolute px-8 h-full font-semibold uppercase text-white'>Search</button>
                                 </div>
                             </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoMdImages } from "react-icons/io";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import { add_product } from '../store/reducers/homeReducer';
 
 const AddProduct = () => {
-
+    const navigate = useNavigate();
     const { products, categorys } = useSelector(state => state.home)
     const dispatch = useDispatch();
 
@@ -37,6 +37,7 @@ const AddProduct = () => {
         // })
         dispatch(add_product(state))
         console.log(state)
+        navigate(`/home`)
     }
 
     const showList = (e) => {
@@ -121,19 +122,19 @@ const AddProduct = () => {
                     <div className='grid grid-cols-1 w-[70%] mx-auto bg-white rounded-md'>
                         <div className='px-8 py-8'>
                             <div className='px-2 lg:px-7 pt-5'>
-                                <div className='w-full p-4 bg-[#6a5fdf] rounded-md'>
+                                <div className='w-full p-4 bg-[#051894] rounded-md'>
 
                                     <div>
                                         <form>
                                             <div className='flex flex-col mb-3 md:flex-row gap-4 w-full text-[#d0d2d6]'>
                                                 <div className='flex flex-col w-full gap-1'>
                                                     <label htmlFor="name">Product Name</label>
-                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.name} type="text" name='name' id='name' placeholder='Product Name' />
+                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' onChange={inputHandle} value={state.name} type="text" name='name' id='name' placeholder='Product Name' />
                                                 </div>
 
                                                 <div className='flex flex-col w-full gap-1'>
                                                     <label htmlFor="brand">Product Brand</label>
-                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.brand} type="text" name='brand' id='brand' placeholder='Brand Name' />
+                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' onChange={inputHandle} value={state.brand} type="text" name='brand' id='brand' placeholder='Brand Name' />
                                                 </div>
 
                                             </div>
@@ -142,11 +143,11 @@ const AddProduct = () => {
                                             <div className='flex flex-col mb-3 md:flex-row gap-4 w-full text-[#d0d2d6]'>
                                                 <div className='flex flex-col w-full gap-1 relative'>
                                                     <label htmlFor="category">Category</label>
-                                                    <input id={categoryId} readOnly onChange={showList} onClick={showList} className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' value={category} type="text" placeholder='--select category--' />
+                                                    <input id={categoryId} readOnly onChange={showList} onClick={showList} className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' value={category} type="text" placeholder='--select category--' />
 
                                                     <div className={`absolute top-[101%] bg-[#475569] w-full transition-all ${cateShow ? 'scale-100' : 'scale-0'} `}>
                                                         <div className='w-full px-4 py-2 fixed'>
-                                                            <input id={categoryId} value={searchValue} onChange={categorySearch} className='px-3 py-1 w-full focus:border-indigo-500 outline-none bg-transparent border border-slate-700 rounded-md text-[#d0d2d6] overflow-hidden' type="text" placeholder='search' />
+                                                            <input id={categoryId} value={searchValue} onChange={categorySearch} className='px-3 py-1 w-full focus:border-indigo-500 outline-none bg-transparent border border-slate-700 rounded-md text-[#000000] overflow-hidden' type="text" placeholder='search' />
                                                         </div>
                                                         <div className='pt-14'></div>
                                                         <div className='flex justify-start items-start flex-col h-[290px] overflow-x-scrool'>
@@ -204,7 +205,7 @@ const AddProduct = () => {
 
                                                 <div className='flex flex-col w-full gap-1'>
                                                     <label htmlFor="stock">Product Stock</label>
-                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.stock} type="text" name='stock' id='stock' placeholder='Stock' />
+                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' onChange={inputHandle} value={state.stock} type="text" name='stock' id='stock' placeholder='Stock' />
                                                 </div>
 
                                             </div>
@@ -213,19 +214,19 @@ const AddProduct = () => {
                                             <div className='flex flex-col mb-3 md:flex-row gap-4 w-full text-[#d0d2d6]'>
                                                 <div className='flex flex-col w-full gap-1'>
                                                     <label htmlFor="price">Price</label>
-                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.price} type="number" name='price' id='price' placeholder='price' />
+                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' onChange={inputHandle} value={state.price} type="number" name='price' id='price' placeholder='price' />
                                                 </div>
 
                                                 <div className='flex flex-col w-full gap-1'>
                                                     <label htmlFor="discount">Discount</label>
-                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.discount} type="number" name='discount' id='discount' placeholder='discount by %' />
+                                                    <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' onChange={inputHandle} value={state.discount} type="number" name='discount' id='discount' placeholder='discount by %' />
                                                 </div>
 
                                             </div>
 
                                             <div className='flex flex-col w-full gap-1 mb-5'>
                                                 <label htmlFor="description" className='text-[#d0d2d6]'>Description</label>
-                                                <textarea className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.description} name='description' id='description' placeholder='Description' cols="10" rows="4"></textarea>
+                                                <textarea className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#ecebfa] border border-slate-700 rounded-md text-[#000000]' onChange={inputHandle} value={state.description} name='description' id='description' placeholder='Description' cols="10" rows="4"></textarea>
 
                                             </div>
 
