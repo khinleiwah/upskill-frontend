@@ -51,7 +51,7 @@ export const query_products = createAsyncThunk(
     'product/query_products',
     async (query, { fulfillWithValue }) => {
         try {
-            const { data } = await productApi.get(`/product?category=${query.category}&&searchValue=${query.searchValue ? query.searchValue : ''}`)
+            const { data } = await productApi.get(`/product?category=${query.category}&&searchValue=${query.searchValue}`)
             // const { data } = await axios.get(`product/product?category=${query.category}&&searchValue=${query.searchValue ? query.searchValue : ''}`)
             console.log(data)
             return fulfillWithValue(data)
@@ -60,27 +60,6 @@ export const query_products = createAsyncThunk(
         }
     }
 )
-
-export const add_product = createAsyncThunk(
-    'product/add_product',
-    async (info, { fulfillWithValue }) => {
-        try {
-
-            console.log("axios "+info)
-            const response = await productApi.post(
-                '/product/add',
-                info
-              );
-
-            console.log(response)
-            return fulfillWithValue(response)
-        } catch (error) {
-            console.log(error.respone)
-        }
-    }
-)
-
-// End Method 
 
 export const homeReducer = createSlice({
     name: 'home',
@@ -108,6 +87,7 @@ export const homeReducer = createSlice({
             .addCase(product_details.fulfilled, (state, { payload }) => {
                 state.detail = payload;
             })
+           
     }
 })
 

@@ -18,9 +18,12 @@ const ShopProducts = ({ styles, products }) => {
                             <li className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#051894] hover:text-white hover:rotate-[720deg] transition-all'>
                                 <FaRegHeart />
                             </li>
-                            <li className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#051894] hover:text-white hover:rotate-[720deg] transition-all'>
+                            {/* <li className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#051894] hover:text-white hover:rotate-[720deg] transition-all'>
                                 <FaEye />
-                            </li>
+                            </li> */}
+                            <Link to={`/product/details/${p.id}`} className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#051894] hover:text-white hover:rotate-[720deg] transition-all'>
+                                <FaEye />
+                            </Link>
                             <li className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#051894] hover:text-white hover:rotate-[720deg] transition-all'>
                                 <RiShoppingCartLine />
                             </li>

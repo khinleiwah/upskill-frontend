@@ -48,9 +48,9 @@ const Shops = () => {
             
             <section className='py-16'>
                 <div className='w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
-                    <div className={` md:block hidden ${!filter ? 'mb-6' : 'mb-0'} `}>
+                    {/* <div className={` md:block hidden ${!filter ? 'mb-6' : 'mb-0'} `}>
                         <button onClick={() => setFilter(!filter)} className='text-center w-full py-2 px-3 bg-indigo-500 text-white'>Filter Product</button>
-                    </div>
+                    </div> */}
 
                     <div className='w-full flex flex-wrap'>
                         <div className={`w-3/12 md-lg:w-4/12 md:w-full pr-8 ${filter ? 'md:h-0 md:overflow-hidden md:mb-6' : 'md:h-auto md:overflow-auto md:mb-0'} `}>
@@ -113,7 +113,7 @@ const Shops = () => {
 
                         <div className='w-9/12 md-lg:w-8/12 md:w-full'>
                             <div className='pl-8 md:pl-0'>
-                                <div className='py-4 bg-white mb-10 px-3 rounded-md flex justify-between items-start border'>
+                                {/* <div className='py-4 bg-white mb-10 px-3 rounded-md flex justify-between items-start border'>
 
                                     <div className='flex justify-center items-center gap-3'>
                                         <select onChange={(e) => setSortPrice(e.target.value)} className='p-1 border outline-0 text-slate-600 font-semibold' name="" id="">
@@ -130,7 +130,7 @@ const Shops = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className='pb-8'>
                                     <ShopProducts products={products} styles={styles} />

@@ -5,6 +5,8 @@ import FeatureProducts from '../components/products/FeatureProducts';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_category, get_products } from '../store/reducers/homeReducer';
 
+
+
 const Home = () => {
    
     const dispatch = useDispatch()
@@ -12,6 +14,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(get_category())
         dispatch(get_products())
+        
     },[])
 
     return (
